@@ -15,7 +15,7 @@ if (!$db_selected) {
 }
 //================================================================
 
-$Latitud = mysql_real_escape_string($connection, $_GET['Latitud']);
+$Latitud = htmlspecialchars($connection, $_GET['Latitud']);
 
 $query ="INSERT INTO android(lat) VALUES('$Latitud')";
 
